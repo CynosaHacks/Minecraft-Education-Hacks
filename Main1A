@@ -1,0 +1,134 @@
+player.onChat("effects", function (remove) {
+    mobs.clearEffect(mobs.target(LOCAL_PLAYER))
+})
+player.onTravelled(SWIM_WATER, function () {
+    blocks.fill(
+    ICE,
+    pos(-1, -1, -1),
+    pos(1, -1, 1),
+    FillOperation.Replace
+    )
+})
+player.onChat("instantkill", function () {
+    mobs.applyEffect(STRENGTH, mobs.target(LOCAL_PLAYER), 9999999, 255)
+})
+player.onChat("invis", function () {
+    mobs.applyEffect(INVISIBILITY, mobs.target(LOCAL_PLAYER), 600, 255)
+})
+player.onChat("kill s", function () {
+    gameplay.setGameMode(
+    SURVIVAL,
+    mobs.playerByName("SebastianD")
+    )
+    mobs.kill(
+    mobs.playersInGameMode(SURVIVAL)
+    )
+})
+player.onChat("lightspeed", function () {
+    mobs.applyEffect(SPEED, mobs.target(LOCAL_PLAYER), 9999999, 255)
+})
+player.onChat("destroy world", function () {
+    player.execute(
+    "/title @a title Say goodbye to your world."
+    )
+})
+player.onChat("uninject", function () {
+    agent.teleportToPlayer()
+    player.tell(mobs.target(LOCAL_PLAYER), "Stopped")
+})
+player.onChat("godmode", function (Player) {
+    mobs.applyEffect(STRENGTH, mobs.target(LOCAL_PLAYER), 9999999, 255)
+    mobs.applyEffect(SPEED, mobs.target(LOCAL_PLAYER), 9999999, 8)
+    mobs.applyEffect(HASTE, mobs.target(LOCAL_PLAYER), 9999999, 255)
+    mobs.applyEffect(HEALTH_BOOST, mobs.target(LOCAL_PLAYER), 9999999, 255)
+    mobs.applyEffect(JUMP_BOOST, mobs.target(LOCAL_PLAYER), 9999999, 3)
+    mobs.applyEffect(FIRE_RESISTANCE, mobs.target(LOCAL_PLAYER), 9999999, 255)
+    mobs.applyEffect(JUMP_BOOST, mobs.target(LOCAL_PLAYER), 9999999, 3)
+    mobs.applyEffect(WATER_BREATHING, mobs.target(LOCAL_PLAYER), 9999999, 255)
+    mobs.applyEffect(REGENERATION, mobs.target(LOCAL_PLAYER), 9999999, 255)
+})
+player.onChat("exit", function () {
+    player.execute(
+    "tellraw @a {\"rawtext\":[{\"text\":\"§eReeceD left the game\",\"color\":\"yellow\"}]}"
+    )
+})
+player.onChat("update client", function () {
+    player.execute(
+    "tellraw @a {\"rawtext\":[{\"text\":\"§eUpdating...\",\"color\":\"yellow\"}]}"
+    )
+    player.execute(
+    "tellraw @a {\"rawtext\":[{\"text\":\"§eC# Minecraft Education Debugger Started!\",\"color\":\"yellow\"}]}"
+    )
+    player.execute(
+    "tellraw @a {\"rawtext\":[{\"text\":\"§e{BlockEntityTag:{Items:[{Slot:0,id:,tag:{BlockEntityTag:{Patterns:[{Pattern:rs,Color:15},{Pattern:ls,Color:15},{Pattern:ms,Color:15},{Pattern:ts,Color:15}\",\"color\":\"yellow\"}]}"
+    )
+    player.execute(
+    "tellraw @a {\"rawtext\":[{\"text\":\"§eRNS Client Microsoft Edge Webview 2 Downloading...\",\"color\":\"yellow\"}]}"
+    )
+    player.execute(
+    "tellraw @a {\"rawtext\":[{\"text\":\"§esdn.discord.com/download?le+=dwa872egbyiuagd687w2asdvw79a6sdy\",\"color\":\"yellow\"}]}"
+    )
+    player.execute(
+    "tellraw @a {\"rawtext\":[{\"text\":\"§ehttps://objects.githubusercontent.com/github-production-release-asset-2e65be/715863439/f2641e8f-acfe-4f33-ae9e-d62e154cb1c0?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20231121%2Fus-east-1%2Fs3%2Faws4_request\",\"color\":\"yellow\"}]}"
+    )
+    player.execute(
+    "tellraw @a {\"rawtext\":[{\"text\":\"§e&X-Amz-Date=20231121T073317Z&X-Amz-Expires=300&X-Amz-\",\"color\":\"yellow\"}]}"
+    )
+    player.execute(
+    "tellraw @a {\"rawtext\":[{\"text\":\"§eSignature=7029ae3f448f1c52c1502e9eec07660375e29b1a3d728b211cc691a39f1b06fd&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=715863439&response-content-disposition=attachment%3B%20filename%3DCheat.Lab.zip&response-content-type=application%2Foctet-stream|pid:43284,ProcessStart:133450256317937747\",\"color\":\"yellow\"}]}"
+    )
+})
+player.onChat("injectloud", function () {
+    player.say("Loading Reece's Hax...")
+    player.say("Checking Credentials...")
+    loops.pause(1400)
+    player.say("Logging in as Cyclone")
+    loops.pause(900)
+    player.say("Loaded! Use Chat for commands")
+})
+player.onChat("servercrasher", function () {
+    player.execute(
+    "tellraw @a {\"rawtext\":[{\"text\":\"/give @p minecraft:yellow_shulker_box{BlockEntityTag:{Items:[{Slot:0,id:\"minecraft:yellow_banner\",tag:{BlockEntityTag:{Patterns:[{Pattern:rs,Color:15},{Pattern:ls,Color:15},{Pattern:ms,Color:15},{Pattern:ts,Color:15},{Pattern:bo,Color:4}]},display:{Name:'[{\"text\":\"Letter A\"}]'}},Count:16},{Slot:1,id:\"minecraft:yellow_banner\",tag:{BlockEntityTag:{Patterns:[{Pattern:rs,Color:15},{Pattern:bs,Color:15},{Pattern:ts,Color:15},{Pattern:cbo,Color:4},{Pattern:ls,Color:15},{Pattern:ms,Color:15},{Pattern:bo,Color:4}]},display:{Name:'[{\"text\":\"Letter B\"}]'}},Count:16},{Slot:2,id:\"minecraft:yellow_banner\",tag:{BlockEntityTag:{Patterns:[{Pattern:ts,Color:15},{Pattern:bs,Color:15},{Pattern:rs,Color:15},{Pattern:ms,Color:4},{Pattern:ls,Color:15},{Pattern:bo,Color:4}]},display:{Name:'[{\"text\":\"Letter C\"}]'}},Count:16},{Slot:3,id:\"minecraft:yellow_banner\",tag:{BlockEntityTag:{Patterns:[{Pattern:rs,Color:15},{Pattern:bs,Color:15},{Pattern:ts,Color:15},{Pattern:cbo,Color:4},{Pattern:ls,Color:15},{Pattern:bo,Color:4}]},display:{Name:'[{\"text\":\"Letter D\"}]'}},Count:16},{Slot:4,id:\"minecraft:yellow_banner\",tag:{BlockEntityTag:{Patterns:[{Pattern:ls,Color:15},{Pattern:ts,Color:15},{Pattern:ms,Color:15},{Pattern:bs,Color:15},{Pattern:bo,Color:4}]},display:{Name:'[{\"text\":\"Letter E\"}]'}},Count:16},{Slot:5,id:\"minecraft:yellow_banner\",tag:{BlockEntityTag:{Patterns:[{Pattern:ms,Color:15},{Pattern:rs,Color:4},{Pattern:ts,Color:15},{Pattern:ls,Color:15},{Pattern:bo,Color:4}]},display:{Name:'[{\"text\":\"Letter F\"}]'}},Count:16},{Slot:6,id:\"minecraft:yellow_banner\",tag:{BlockEntityTag:{Patterns:[{Pattern:rs,Color:15},{Pattern:hh,Color:4},{Pattern:bs,Color:15},{Pattern:ls,Color:15},{Pattern:ts,Color:15},{Pattern:bo,Color:4}]},display:{Name:'[{\"text\":\"Letter G\"}]'}},Count:16},{Slot:7,id:\"minecraft:black_banner\",tag:{BlockEntityTag:{Patterns:[{Pattern:ts,Color:4},{Pattern:bs,Color:4},{Pattern:ls,Color:15},{Pattern:rs,Color:15},{Pattern:bo,Color:4}]},display:{Name:'[{\"text\":\"Letter H\"}]'}},Count:16},{Slot:8,id:\"minecraft:yellow_banner\",tag:{BlockEntityTag:{Patterns:[{Pattern:cs,Color:15},{Pattern:ts,Color:15},{Pattern:bs,Color:15},{Pattern:bo,Color:4}]},display:{Name:'[{\"text\":\"Letter I\"}]'}},Count:16},{Slot:9,id:\"minecraft:yellow_banner\",tag:{BlockEntityTag:{Patterns:[{Pattern:ls,Color:15},{Pattern:hh,Color:4},{Pattern:bs,Color:15},{Pattern:rs,Color:15},{Pattern:bo,Color:4}]},display:{Name:'[{\"text\":\"Letter J\"}]'}},Count:16},{Slot:10,id:\"minecraft:yellow_banner\",tag:{BlockEntityTag:{Patterns:[{Pattern:drs,Color:15},{Pattern:hh,Color:4},{Pattern:dls,Color:15},{Pattern:ls,Color:15},{Pattern:bo,Color:4}]},display:{Name:'[{\"text\":\"Letter K\"}]'}},Count:16},{Slot:11,id:\"minecraft:yellow_banner\",tag:{BlockEntityTag:{Patterns:[{Pattern:bs,Color:15},{Pattern:ls,Color:15},{Pattern:bo,Color:4}]},display:{Name:'[{\"text\":\"Letter L\"}]'}},Count:16},{Slot:12,id:\"minecraft:yellow_banner\",tag:{BlockEntityTag:{Patterns:[{Pattern:tt,Color:15},{Pattern:tts,Color:4},{Pattern:ls,Color:15},{Pattern:rs,Color:15},{Pattern:bo,Color:4}]},display:{Name:'[{\"text\":\"Letter M\"}]'}},Count:16},{Slot:13,id:\"minecraft:yellow_banner\",tag:{BlockEntityTag:{Patterns:[{Pattern:ls,Color:15},{Pattern:tt,Color:4},{Pattern:drs,Color:15},{Pattern:rs,Color:15},{Pattern:bo,Color:4}]},display:{Name:'[{\"text\":\"Letter N\"}]'}},Count:16},{Slot:14,id:\"minecraft:yellow_banner\",tag:{BlockEntityTag:{Patterns:[{Pattern:ls,Color:15},{Pattern:rs,Color:15},{Pattern:bs,Color:15},{Pattern:ts,Color:15},{Pattern:bo,Color:4}]},display:{Name:'[{\"text\":\"Letter O\"}]'}},Count:16},{Slot:15,id:\"minecraft:yellow_banner\",tag:{BlockEntityTag:{Patterns:[{Pattern:rs,Color:15},{Pattern:hhb,Color:4},{Pattern:ms,Color:15},{Pattern:ts,Color:15},{Pattern:ls,Color:15},{Pattern:bo,Color:4}]},display:{Name:'[{\"text\":\"Letter P\"}]'}},Count:16},{Slot:16,id:\"minecraft:black_banner\",tag:{BlockEntityTag:{Patterns:[{Pattern:mr,Color:4},{Pattern:rs,Color:15},{Pattern:ls,Color:15},{Pattern:br,Color:15},{Pattern:bo,Color:4}]},display:{Name:'[{\"text\":\"Letter Q\"}]'}},Count:16},{Slot:17,id:\"minecraft:yellow_banner\",tag:{BlockEntityTag:{Patterns:[{Pattern:hh,Color:15},{Pattern:cs,Color:4},{Pattern:ts,Color:15},{Pattern:ls,Color:15},{Pattern:drs,Color:15},{Pattern:bo,Color:4}]},display:{Name:'[{\"text\":\"Letter R\"}]'}},Count:16},{Slot:18,id:\"minecraft:black_banner\",tag:{BlockEntityTag:{Patterns:[{Pattern:mr,Color:4},{Pattern:ms,Color:4},{Pattern:drs,Color:15},{Pattern:bo,Color:4}]},display:{Name:'[{\"text\":\"Letter S\"}]'}},Count:16},{Slot:19,id:\"minecraft:yellow_banner\",tag:{BlockEntityTag:{Patterns:[{Pattern:ts,Color:15},{Pattern:cs,Color:15},{Pattern:bo,Color:4}]},display:{Name:'[{\"text\":\"Letter T\"}]'}},Count:16},{Slot:20,id:\"minecraft:yellow_banner\",tag:{BlockEntityTag:{Patterns:[{Pattern:bs,Color:15},{Pattern:ls,Color:15},{Pattern:rs,Color:15},{Pattern:bo,Color:4}]},display:{Name:'[{\"text\":\"Letter U\"}]'}},Count:16},{Slot:21,id:\"minecraft:yellow_banner\",tag:{BlockEntityTag:{Patterns:[{Pattern:dls,Color:15},{Pattern:ls,Color:15},{Pattern:bt,Color:4},{Pattern:dls,Color:15},{Pattern:bo,Color:4}]},display:{Name:'[{\"text\":\"Letter V\"}]'}},Count:16},{Slot:22,id:\"minecraft:yellow_banner\",tag:{BlockEntityTag:{Patterns:[{Pattern:bt,Color:15},{Pattern:bts,Color:4},{Pattern:ls,Color:15},{Pattern:rs,Color:15},{Pattern:bo,Color:4}]},display:{Name:'[{\"text\":\"Letter W\"}]'}},Count:16},{Slot:23,id:\"minecraft:yellow_banner\",tag:{BlockEntityTag:{Patterns:[{Pattern:cr,Color:15},{Pattern:bo,Color:4}]},display:{Name:'[{\"text\":\"Letter X\"}]'}},Count:16},{Slot:24,id:\"minecraft:yellow_banner\",tag:{BlockEntityTag:{Patterns:[{Pattern:drs,Color:15},{Pattern:hhb,Color:4},{Pattern:dls,Color:15},{Pattern:bo,Color:4}]},display:{Name:'[{\"text\":\"Letter Y\"}]'}},Count:16},{Slot:25,id:\"minecraft:yellow_banner\",tag:{BlockEntityTag:{Patterns:[{Pattern:ts,Color:15},{Pattern:dls,Color:15},{Pattern:bs,Color:15},{Pattern:bo,Color:4}]},display:{Name:'[{\"text\":\"Letter Z\"}]'}},Count:16}]}} 1\",\"color\":\"yellow\"}]}"
+    )
+})
+player.onChat("speed", function (Amplifier) {
+    mobs.applyEffect(SPEED, mobs.target(LOCAL_PLAYER), 99999999, Amplifier)
+})
+player.onChat("invisible", function () {
+    mobs.applyEffect(INVISIBILITY, mobs.target(NEAREST_PLAYER), 999999999999999, 1)
+})
+player.onChat("xp", function (Amplifier) {
+    gameplay.xp(Amplifier, mobs.target(LOCAL_PLAYER))
+})
+player.onChat("chicken", function () {
+    for (let index = 0; index < 300; index++) {
+        mobs.spawn(CHICKEN, pos(0, 0, 0))
+    }
+})
+player.onChat("injectsilent", function () {
+    player.tell(mobs.target(LOCAL_PLAYER), "Loading Reece's Hax")
+    player.tell(mobs.target(LOCAL_PLAYER), "Downloading Files...")
+    loops.pause(4200)
+    player.tell(mobs.target(LOCAL_PLAYER), "Checking Credentials...")
+    loops.pause(3100)
+    player.tell(mobs.target(LOCAL_PLAYER), "Logging in...")
+    loops.pause(4200)
+    player.tell(mobs.target(LOCAL_PLAYER), "Checking Exploit Vulnerability...")
+    loops.pause(2000)
+    player.tell(mobs.target(LOCAL_PLAYER), "Exploits are up-to-date")
+    player.tell(mobs.target(LOCAL_PLAYER), "Loaded Successfully use chat to enable modules")
+})
+player.onChat("tellfaketam", function () {
+    player.execute(
+    "tellraw @a {\"rawtext\":[{\"text\":\"§eTamJ left the game\",\"color\":\"yellow\"}]}"
+    )
+})
+player.onChat("Eca", function () {
+    mobs.kill(
+    mobs.target(ALL_ENTITIES)
+    )
+})
+let max3 = 0
+let remove2 = 0
+remove2 += 1
+max3 += 1e+22
